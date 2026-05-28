@@ -1,0 +1,12 @@
+{
+  "name": "dns-probe-2eac8f",
+  "version": "1.0.0",
+  "description": "A dns probe utility",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": ["dns-probe", "utility"],
+  "license": "MIT"
+}

