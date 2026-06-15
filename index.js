@@ -1,6 +1,6 @@
 'use strict';
 const { Transform, Readable } = require('stream');
-const TAG = 'dns-probe-2eac8f';
+const TAG = 'dns-probe-9926eb';
 class Upper extends Transform {
   _transform(chunk, enc, cb) { cb(null, chunk.toString().toUpperCase()); }
 }

